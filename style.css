@@ -13,15 +13,28 @@
   top: 80px;
   position: relative;
   padding:15px;
+  border:1px;
 }
 
 .container {
-  width: 80%;
+  width: 800px;
   margin:0 auto;
+  border:1px solid black;
+  padding-top: 0px;
 }
 
 #about, #mywork, #contact-me {
-  margin-top: 50px;
+  margin-top: 0px;
+  border:1px solid red;
+}
+
+#content > .container > div {
+    padding: 78px 0;
+  }
+
+#my-info{
+  border:1px solid green;
+  display: block;
 }
 
 #myworkgallery {
@@ -62,15 +75,16 @@ li:hover a{
 
 #my-avatar{
   float: left;
+  border:1px solid yellow;
 }
 
 #my-avatar img{
   margin-right: 40px; 
-  width: 200px
+  width: 200px;
 }
 
 h1 {
-  margin-bottom: 0px;
+  margin-top: 0px;
   text-align: center;
 }
 
@@ -105,7 +119,7 @@ hr {
 
 .item{
   position:relative;
-  max-width: 120%;
+  max-width: 100%;
   display: inline-block;
   margin-bottom: 10px;
 }
@@ -180,18 +194,80 @@ hr {
   background-color: #407FC7;
 }
 
-
-#content > .container > div {
-  padding: 78px 0;
-}
-
 .bar{
   border: 2px solid #ff6600;
   width: 80px;
 }
 
+@media  screen and (min-width: 2001px) {
+  .menu-button, .menu-button-checkbox{
+    display: none;
+  }
+}
 
 
+@media  screen and (max-width: 2000px) {
+  .container{
+    width: auto;
+  }
+
+  .menu-button{
+    border:0;
+    float: right;
+    font-size: 35px;
+    color: #ffffff;
+    background-color: transparent;
+    padding: 15px 20px;
+  }
+
+  .menu{
+    position: fixed;
+    border:0;
+    margin-top: 0;
+    top: 87px;
+    padding-left: 0px;
+    right: 0;
+    width: 150px;
+    height: 100%;
+    display: none;
+  }
+
+  .menu li{
+    border:0;
+    border-radius: 0;
+  }
+
+  .menu-button-checkbox{
+    position: fixed;
+    top: 30px;
+    right: -1px;
+    height: 40px;
+    width: 60px;
+    opacity: 0;
+  }
+
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }
+  
+  #my-avatar {
+    width: 100%;
+    margin-top: 0px;
+  }
+  
+  #my-avatar img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #content > .container > div {
+    padding: 0;
+  }
+
+  .item {
+    max-width: 100%;
+  }
+}
 
 
 
